@@ -1,0 +1,14 @@
+<apex:page controller="myControllr">
+ <!-- Render and Rerender Demo -->
+ <apex:form >
+   <apex:pageBlock >
+    <apex:commandButton value="Show Bottom Page Block" action="{!ShowBlockMethod}"/>
+   </apex:pageBlock>
+    
+   <apex:pageBlock rendered="{!ShowpageBlockFlag}">
+    Account Name  :<apex:outputField value="{!acc.name}"/>
+<br/>
+    Account Number :<apex:outputField value="{!acc.accountnumber}"/>
+   </apex:pageBlock>
+ </apex:form>
+</apex:page>

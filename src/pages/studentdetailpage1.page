@@ -1,0 +1,18 @@
+<apex:page standardController="Student__c" extensions="stdnt_extension">
+    
+         <apex:pageBlock id="thePageBlock"> 
+         <apex:form id="abc" styleClass="form-horizontal">
+        <apex:actionFunction name="saveStudent" action="{!saveRecord}" reRender="thePageBlock"/>
+              <div id="editContact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                  <apex:pageBlockSection id="theSection"> 
+                      <apex:inputField id="newStudentName" value="{!stdnt.Name}"/> <br></br>
+                      <apex:inputField id="newStudentDepartment" value="{!stdnt.Department__c}"/> <br></br>
+                      <apex:inputField id="newStudentCourse" value="{!stdnt.Course__c}"/> <br></br>
+                      <apex:inputField id="newStudentSubject" value="{!stdnt.Subject__c}"/>                   
+                      <apex:commandButton value="Save" onclick="saveStudent();" />
+                 </apex:pageBlockSection>
+             </div>
+         </apex:form>    
+       </apex:pageBlock>
+   
+</apex:page>

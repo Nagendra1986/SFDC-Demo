@@ -1,0 +1,22 @@
+<apex:page standardController="Resources__c">
+<apex:form >
+<apex:pageBlock mode="edit">
+<apex:pageBlockSection title="My Content Section" columns="2" >
+                <apex:inputField value="{!Resources__c.Resource_Name__c}"/>
+                <apex:inputField value="{!Resources__c.EmpID__c}"/>
+                <apex:inputField value="{!Resources__c.Contact_No__c}"/>
+                <apex:inputField value="{!Resources__c.OverAll_Experience__c}"/>
+                <apex:inputField value="{!Resources__c.Salesforce_Experience__c}"/>
+                <apex:inputField value="{!Resources__c.Practice_Joining_Date__c}"/>
+                <apex:inputField value="{!Resources__c.Current_Status__c}"/>
+  </apex:pageBlockSection>
+  <apex:pageBlockButtons >
+     <apex:commandButton value="save" action="{!save}"/>
+     
+      <apex:commandButton value="cancel" action="{!cancel}"/>
+
+  </apex:pageBlockButtons>                          
+                            
+</apex:pageBlock>
+</apex:form>
+  </apex:page>

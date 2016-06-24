@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pipeline Tracker</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pipeline Tracker</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>BDC</masterLabel>
+            <translation><!-- BDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDC</masterLabel>
+            <translation><!-- CDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDC</masterLabel>
+            <translation><!-- HDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KDC</masterLabel>
+            <translation><!-- KDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PDC</masterLabel>
+            <translation><!-- PDC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wipro Sales Resource --></label>
+        <name>Wipro_Sales_Resource__c</name>
+        <relationshipLabel><!-- Pipeline Tracker --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

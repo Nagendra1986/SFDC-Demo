@@ -1,0 +1,18 @@
+<apex:page controller="MyTest">
+<script type="text/javascript">
+    function callView() {
+        alert('Invoking controller...');
+        showtext();
+        alert('Invokation successful!');
+    }
+</script >
+<apex:form id="form1">
+    <apex:outputtext id="inputter" value="{!mystr}"/>
+    <br></br>
+    <apex:commandButton value="Replica" onclick="callView()" />
+    <apex:actionFunction name="showtext" action="{!showtext}" rerender="inputter">
+    <apex:param name="myParam" value="Param @ VF"/>
+    </apex:actionFunction>
+</apex:form>
+<body/>
+</Apex:Page>

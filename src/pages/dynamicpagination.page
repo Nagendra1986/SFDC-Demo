@@ -1,0 +1,48 @@
+<apex:page controller="dynamic_pagination">
+ <apex:pageMessages />
+     <apex:form >
+        <apex:pageBlock id="pb">
+        <apex:commandButton value="Save" action="{!tosave}" id="saveButton"  />
+           <apex:pageBlockTable value="{!Organisations}" var="a">
+               
+                <apex:column value="{!a.Name}"/>
+                <apex:column value="{!a.Country__c}"/>
+                <apex:column value="{!a.State__c}"/>
+                 <apex:inlineEditSupport event="ondblClick"/>
+           </apex:pageBlockTable>
+
+
+          
+                 <apex:panelGrid columns="8">
+                        <apex:selectList label="Set Page Size:" value="{!pageSize}" size="1" required="true" >
+                        <apex:selectOptions value="{!items}"/>
+                         <apex:actionSupport event="onchange" action="{!Refresh}"  reRender="pb"/>      
+                        </apex:selectList> 
+                        
+                        getPages
+                        <apex:commandButton status="fetchStatus" reRender="pb" value="|<" action="{!first}" disabled="{!!hasPrevious}" title="First Page"/>
+                        <apex:commandButton status="fetchStatus" reRender="pb" value="<" action="{!previous}" disabled="{!!hasPrevious}" title="Previous Page"/>
+                        
+                     <!--   <apex:selectList label="Set Page Size:" value="{!PageNumber}" size="1" required="true" >
+                            <apex:selectOptions value="{!Pages}"/>    
+                            <apex:actionSupport event="onchange" action="{!Refresh}" reRender="pb" /> 
+                        </apex:selectList>  -->
+                        
+                         <apex:actionFunction action="{!Refresh}" name="fun" reRender="pb"/>
+                          <apex:selectList size="1" value="{!PageNumber1}" onchange="fun();">
+                            <apex:selectOptions value="{!Pages}"/>  
+                          </apex:selectList>
+                        <apex:outputText id="optxt" value="{!pageNumber } of:{!noOfPages}" />
+                        <apex:commandButton status="fetchStatus" reRender="pb" value=">" action="{!next}" disabled="{!!hasNext}" title="Next Page"/>
+                        <apex:commandButton status="fetchStatus" reRender="pb" value=">|" action="{!last}" disabled="{!!hasNext}" title="Last Page"/>
+                        <apex:outputText >{!(pageNumber * display)+1-display}-{!IF((pageNumber * display)>noOfRecords, noOfRecords,(pageNumber * display))} of {!noOfRecords}</apex:outputText>
+                        
+                      <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                            <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText="Fetched Results"/>
+                      </apex:outputPanel>
+               </apex:panelGrid>
+               
+           
+       </apex:pageBlock> 
+    </apex:form>
+</apex:page>

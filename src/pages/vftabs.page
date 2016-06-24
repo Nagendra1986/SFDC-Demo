@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:tabPanel >
+        <apex:tab label="Pagination">
+            <apex:include pageName="soql_offset_example"/>
+        </apex:tab>
+        <apex:tab label="tab"/>
+    </apex:tabPanel>
+</apex:page>

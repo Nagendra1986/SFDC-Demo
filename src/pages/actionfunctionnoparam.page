@@ -1,0 +1,29 @@
+<apex:page controller="MyTest">
+<script>
+   function enable(){
+        alert(document.getElementById('hide1').className);
+        document.getElementById('hide1').className = "btn input";
+        alert(document.getElementById('hide1').className);
+    }
+    function callView() {
+        var callBtn= document.getElementById('hide1').className ;
+        alert(document.getElementById('hide1').className);
+
+        if(callBtn == 'btn input'){
+            alert('m clicking..');
+            showlist();
+    alert('After I clicked');
+        }
+    }
+
+</script >
+<apex:form id="form1">
+    <input type="button" value="Action Function Invoker" class="btn btnDisabled" id="hide1" onclick="callView();"/>
+    <input type="button" value="Enable Action Invoker"  class="btn" id="testt" onclick="enable()"/>
+    <br></br>
+            <apex:outputtext value="{!mystr}" id="out"/>
+    <apex:actionFunction name="showlist" action="{!showlist}" rerender="out">    
+
+    </apex:actionFunction>
+</apex:form>
+</Apex:Page>

@@ -1,0 +1,43 @@
+<apex:page controller="AngularRemoting_Con">  
+    
+   <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"/>  
+   <!--Remoting Stuff-->  
+   <script>  
+     function getSobjects(callback){              
+       Visualforce.remoting.Manager.invokeAction(  
+         '{!$RemoteAction.AngularRemoting_Con.getData}',  
+         callback,  
+         {escape: false}  
+       );        
+     }  
+   </script>  
+   <script>  
+     var vfremote = angular.module('VFRemoting',[]);  
+     vfremote.factory('VFRemotingFactory',function($q,$rootScope){  
+       var factory = {};  
+       factory.getData = function(){  
+         var deferred = $q.defer();  
+         getSobjects(function(result){  
+           $rootScope.$apply(function(){  
+             deferred.resolve(result);  
+           });  
+         });  
+         return deferred.promise;  
+       }  
+       return factory;  
+     });  
+     vfremote.controller('VFRemoteController',function($scope,VFRemotingFactory){  
+       VFRemotingFactory.getData().then(function(result){  
+         $scope.data = result;  
+       });  
+     });  
+   </script>  
+   <div ng-app="VFRemoting">  
+     <div ng-controller="VFRemoteController">  
+       <ul class="list-group">  
+         <li ng-repeat="acc in data" class="list-group-item">{{acc.Name}}</li>  
+       </ul>  
+     </div>  
+   </div>  
+     
+ </apex:page>

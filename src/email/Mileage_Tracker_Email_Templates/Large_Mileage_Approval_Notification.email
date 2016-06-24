@@ -1,0 +1,1 @@
+{!Mileage__c.OwnerFullName} has submitted a Mileage Record with {!Mileage__c.Miles__c} miles on {!Mileage__c.LastModifiedDate}

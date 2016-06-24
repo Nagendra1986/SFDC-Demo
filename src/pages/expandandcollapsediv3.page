@@ -1,0 +1,50 @@
+<apex:page >
+<style>
+.hidestyle
+{
+border-style:solid;
+border-color:#98bf21;
+position:relative;
+left:10px;
+height:100px;
+background-color:#6495ed;
+}
+</style>
+  <script type="text/javascript"  src="{!URLFOR($Resource.jQuery, '/jQuery/js/jquery-1.4.2.min.js')}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    $(".section").hide();
+    $("showText").click(function () {
+        $(this).toggleClass("open");
+        $(this).next().toggle();
+    }); //end toggle
+
+    $('#expandall').click(function () {
+        $('.section').show();
+        $('h2').addClass("open");
+    });
+
+    $('#collapseall').click(function () {
+        $('.section').hide();
+        $('h2').removeClass("open");
+    });
+
+}); //end ready
+</script>
+<apex:form >
+<apex:pageBlock >
+<div id="section" class="hidestyle">
+<p>This is hidden on load</p>
+</div>
+<div >
+<apex:commandButton value="+" id="showText"/>
+<apex:outputText value="Hii"/>
+
+</div>
+
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

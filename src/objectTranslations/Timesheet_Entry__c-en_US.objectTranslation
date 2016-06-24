@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Timesheet Entry</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Timesheet Entries</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Displayfields --></label>
+        <name>Displayfields__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effort (in hours) --></label>
+        <name>Effort__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fri --></label>
+        <name>Fri__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incident # --></label>
+        <name>Incident__c</name>
+        <relationshipLabel><!-- Timesheet Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mon --></label>
+        <name>Mon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Activity --></label>
+        <name>Other_Activity__c</name>
+        <picklistValues>
+            <masterLabel>Analysis</masterLabel>
+            <translation><!-- Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference call</masterLabel>
+            <translation><!-- Conference call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document Preparation</masterLabel>
+            <translation><!-- Document Preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Env set up</masterLabel>
+            <translation><!-- Env set up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extra Curricular Activities</masterLabel>
+            <translation><!-- Extra Curricular Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knowledge Transfer</masterLabel>
+            <translation><!-- Knowledge Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meetings &amp; discussions</masterLabel>
+            <translation><!-- Meetings &amp; discussions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Management</masterLabel>
+            <translation><!-- Project Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reading documents</masterLabel>
+            <translation><!-- Reading documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviews &amp; feedback</masterLabel>
+            <translation><!-- Reviews &amp; feedback --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Status Report</masterLabel>
+            <translation><!-- Status Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Study</masterLabel>
+            <translation><!-- System Study --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Troubleshooting &amp; Fixing</masterLabel>
+            <translation><!-- Troubleshooting &amp; Fixing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sat --></label>
+        <name>Sat__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sun --></label>
+        <name>Sun__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tasks Other --></label>
+        <name>Tasks_Other__c</name>
+        <picklistValues>
+            <masterLabel>Analysis</masterLabel>
+            <translation><!-- Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference call</masterLabel>
+            <translation><!-- Conference call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document Preparation</masterLabel>
+            <translation><!-- Document Preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Env set up</masterLabel>
+            <translation><!-- Env set up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extra Curricular Activities</masterLabel>
+            <translation><!-- Extra Curricular Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knowledge Transfer</masterLabel>
+            <translation><!-- Knowledge Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meetings &amp; discussion</masterLabel>
+            <translation><!-- Meetings &amp; discussion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Management</masterLabel>
+            <translation><!-- Project Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reading documents</masterLabel>
+            <translation><!-- Reading documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviews &amp; feedback</masterLabel>
+            <translation><!-- Reviews &amp; feedback --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Status Report</masterLabel>
+            <translation><!-- Status Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Study</masterLabel>
+            <translation><!-- System Study --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Troubleshooting &amp; Fixing</masterLabel>
+            <translation><!-- Troubleshooting &amp; Fixing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tasks --></label>
+        <name>Tasks_for_Incident__c</name>
+        <picklistValues>
+            <masterLabel>Analysis</masterLabel>
+            <translation><!-- Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coding</masterLabel>
+            <translation><!-- Coding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployment</masterLabel>
+            <translation><!-- Deployment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documentation</masterLabel>
+            <translation><!-- Documentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review &amp; Peer Testing</masterLabel>
+            <translation><!-- Review &amp; Peer Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rework</masterLabel>
+            <translation><!-- Rework --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Testing</masterLabel>
+            <translation><!-- Unit Testing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Thu --></label>
+        <name>Thu__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tue --></label>
+        <name>Tue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wed --></label>
+        <name>Wed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Start Date --></label>
+        <name>Week_Start_Date__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Efforts cannot be more than 24 hours --></errorMessage>
+        <name>Efforts_cannot_be_more_than_24_fri</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Efforts cannot be more than 24 hours --></errorMessage>
+        <name>Efforts_cannot_be_more_than_24_mon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Efforts cannot be more than 24 hours --></errorMessage>
+        <name>Efforts_cannot_be_more_than_24_sat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Efforts cannot be more than 24 hours --></errorMessage>
+        <name>Efforts_cannot_be_more_than_24_sun</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Efforts cannot be more than 24 hours --></errorMessage>
+        <name>Efforts_cannot_be_more_than_24_thu</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Efforts cannot be more than 24 hours --></errorMessage>
+        <name>Efforts_cannot_be_more_than_24_tue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Efforts cannot be more than 24 hours --></errorMessage>
+        <name>Efforts_cannot_be_more_than_24_wed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effort cannot be negative --></errorMessage>
+        <name>Efforts_cannot_be_negative_fri</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effort cannot be negative --></errorMessage>
+        <name>Efforts_cannot_be_negative_mon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effort cannot be negative --></errorMessage>
+        <name>Efforts_cannot_be_negative_sat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effort cannot be negative --></errorMessage>
+        <name>Efforts_cannot_be_negative_sun</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effort cannot be negative --></errorMessage>
+        <name>Efforts_cannot_be_negative_thu</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effort cannot be negative --></errorMessage>
+        <name>Efforts_cannot_be_negative_tue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Effort cannot be negative --></errorMessage>
+        <name>Efforts_cannot_be_negative_wed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sorry, but you cannot modify the Task. Please enter 0 Effort and Add another row if you want to delete this entry. --></errorMessage>
+        <name>Prevent_Update_to_Incident_Effort</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sorry, but you cannot modify the Task. Please enter 0 Effort and Add Another Row if you want to delete this entry. --></errorMessage>
+        <name>Prevent_update_to_Other_Effort</name>
+    </validationRules>
+</CustomObjectTranslation>

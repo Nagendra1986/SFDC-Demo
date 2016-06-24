@@ -1,0 +1,6 @@
+<apex:page controller="HelloWorld" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+ webservice hello world example home page 
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,41 @@
+<apex:page standardController="contact" extensions="contct_extension">
+<head>
+  <script type="text/javascript">
+function saveRemoteContact(id) {
+    contactPhone= document.getElementById("{!$Component.abc.newContactPhone}").value;
+       Visualforce.remoting.Manager.invokeAction(
+        '{!$RemoteAction.contct_extension.saveContact}',
+        id, contactPhone,      function(){}, 
+        {escape: true}
+    );
+}
+</script> 
+
+
+<script type="text/javascript">
+function getRemoteContact(contactId) {
+    Visualforce.remoting.Manager.invokeAction(
+        '{!$RemoteAction.contct_extension.getContact}',
+        contactId,   function(result, event){
+            document.getElementById("{!$Component.abc.newContactPhone}").value = result.Phone;
+                    }, 
+        {escape: true}
+    );
+}
+</script> 
+</head>
+<body>
+<a href="#" onclick="getRemoteContact('0039000000JVdUo')">Get contact</a>
+<a href="#editContact" data-toggle="modal" >Open modal</a>
+
+<apex:form id="abc" styleClass="form-horizontal">
+    <div id="editContact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <apex:inputField id="newContactPhone" value="{!contact.Phone}"/>
+              <apex:commandButton value="Save" onclick="saveRemoteContact('0039000000JVdUo')"/>
+
+    </div>
+</apex:form>
+
+</body>
+</apex:page>

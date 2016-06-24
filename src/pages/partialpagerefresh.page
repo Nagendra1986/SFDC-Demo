@@ -1,0 +1,10 @@
+<apex:page controller="partialPageRefreshController" >
+<apex:form >
+<apex:outputPanel id="Result">
+    {!count}
+</apex:outputPanel>
+<apex:commandButton action="{!Increment}" reRender="Result" value="Increment">
+
+</apex:commandButton>
+</apex:form>
+</apex:page>

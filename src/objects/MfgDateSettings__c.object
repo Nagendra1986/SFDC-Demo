@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Settings to update Mfg Date</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>DateValue__c</fullName>
+        <externalId>false</externalId>
+        <label>DateValue</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>MfgDateSettings</label>
+    <visibility>Protected</visibility>
+</CustomObject>

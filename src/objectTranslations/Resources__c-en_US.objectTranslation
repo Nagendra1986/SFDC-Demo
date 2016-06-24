@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Resources</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Resources</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact No --></label>
+        <name>Contact_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Status --></label>
+        <name>Current_Status__c</name>
+        <picklistValues>
+            <masterLabel>Allocated</masterLabel>
+            <translation><!-- Allocated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free</masterLabel>
+            <translation><!-- Free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reserved</masterLabel>
+            <translation><!-- Reserved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EmpID --></label>
+        <name>EmpID__c</name>
+    </fields>
+    <fields>
+        <label><!-- OverAll Experience --></label>
+        <name>OverAll_Experience__c</name>
+    </fields>
+    <fields>
+        <label><!-- Practice Joining Date --></label>
+        <name>Practice_Joining_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resource Name --></label>
+        <name>Resource_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Experience --></label>
+        <name>Salesforce_Experience__c</name>
+    </fields>
+    <fields>
+        <label><!-- searchtext --></label>
+        <name>searchtext__c</name>
+    </fields>
+    <layouts>
+        <layout>Resources Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

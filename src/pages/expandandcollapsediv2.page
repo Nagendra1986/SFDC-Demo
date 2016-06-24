@@ -1,0 +1,54 @@
+<apex:page >
+<style>
+.container
+{
+width:1000px;
+height:100px:
+z-index:-1;
+cursor:auto;
+}
+.hidden
+{
+border-style:solid;
+border-color:#ff0000 #0000ff;
+height:40px:
+z-index:0;
+}
+.separate
+{
+margin:10px;
+padding:5px;
+left:10px;
+z-index:1;
+top:130px;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("[id$=textMsg]").hide();
+$("#plus").click(function(){
+  $("[id$=textMsg]").toggle();
+});
+});
+    
+</script>
+<apex:pageBlock >
+<div class="container">
+<apex:pageblockSection title="SECTION1"  columns="1">
+<span id="plus">[-]</span> 
+<div class="hidden">
+<apex:outputText id="textMsg"  value="This is force.com platform to build your own applications on Salesforce cloud"/><br/>
+</div>
+</apex:pageblockSection>
+
+<div class="separate">
+<apex:outputText value="This is force.com platform to build your own applications on Salesforce cloud"/>
+</div>
+
+
+</div>
+
+  </apex:pageBlock>
+</apex:page>

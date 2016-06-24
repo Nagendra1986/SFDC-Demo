@@ -1,0 +1,19 @@
+<apex:page controller="actionstatuspagecontroller">
+<apex:pageBlock >
+<apex:outputpanel id="opanel1" >
+<apex:pageblocksection id="opanel" >
+
+<apex:actionStatus id="mystatus" startText="start"  stopText="stop"/> 
+{!mystring}
+</apex:pageblocksection>
+</apex:outputpanel>
+<apex:form >
+
+<apex:actionRegion > 
+<apex:commandButton action="{!save}" value="save" status="mystatus"  reRender="opanel1"/>
+</apex:actionRegion>
+
+ </apex:form>
+</apex:pageBlock>
+
+  </apex:page>

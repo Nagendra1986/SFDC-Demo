@@ -1,0 +1,5 @@
+<apex:page >
+Hellooooo....
+<apex:insert name="body"/>
+  
+  </apex:page>

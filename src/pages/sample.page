@@ -1,0 +1,29 @@
+<apex:page standardController="Lead" extensions="pagination_controller" sidebar="false" showHeader="false">
+
+ <apex:form id="frm">
+
+   <apex:pageBlock title="Pagination" >
+
+       <apex:pageblockSection columns="1">
+
+            <apex:repeat value="{!mapLeads[selectedPage]}" var="a">
+
+                <apex:outputLabel value="{!a.name}"></apex:outputLabel>
+
+            </apex:repeat>
+
+           <apex:selectList value="{!selectedPage}" size="1" multiselect="false">
+
+               <apex:SelectOptions value="{!pagesOptions}"></apex:SelectOptions>
+
+            <apex:actionSupport event="onchange" action="{!nextPage}" reRender="frm" />
+
+            </apex:selectList>   
+
+      </apex:pageblockSection>
+
+  </apex:pageBlock>
+
+ </apex:form>   
+
+</apex:page>

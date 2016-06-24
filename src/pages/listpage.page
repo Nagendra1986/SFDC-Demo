@@ -1,0 +1,45 @@
+<apex:page standardController="Resources__c" extensions="save_new">
+<apex:form >
+<apex:pageBlock title="Search"   mode="edit" >
+
+<apex:pageBlockSection title="Search section"  >
+<apex:pageBlockSectionItem >
+<apex:messages />
+       
+        </apex:pageBlockSectionItem>
+<apex:inputText id="searchText" value="{!searchText}" label="search text"/>
+
+
+<apex:actionSupport event="onclick"   action="{!search1}"    rerender="pg,msg1" />
+<apex:commandButton action="{!search1}" value="Search"  />
+
+</apex:pageBlockSection>
+<apex:pageBlockTable value="{!records}" var="a" >
+        <apex:column headerValue="Name">
+        <apex:outputLink value="/apex/detailpage?id={!a.id}">
+        {!a.Name}
+       </apex:outputLink>
+       </apex:column>
+       <!--start> <apex:column value="{!a.Name}" headerValue="ResourceNumber"/><!end-->
+        <apex:column value="{!a.Resource_Name__c}" headerValue="Name"/>
+        <apex:column value="{!a.EmpID__c}" headerValue="Empid"/>
+         <!--start> <apex:column value="{!a.Contact_No__c}" headerValue="ContactNO"/>
+         <apex:column value="{!a.OverAll_Experience__c}" headerValue="OverAllExp"/> <!end-->
+            </apex:pageBlockTable>
+            
+
+
+<apex:pageBlockTable id="pg"  value="{!searchResults}" var="a" rendered="{!searchResults.size >0}">
+                <!--start> <apex:column value="{!a.Name}" headerValue="ResourceNumber"/><!end-->
+        <apex:column value="{!a.Resource_Name__c}" headerValue="Name"/>
+        <apex:column value="{!a.Contact_No__c}" headerValue="Contact no"/>
+         <!--start> <apex:column value="{!a.Contact_No__c}" headerValue="ContactNO"/>
+         <apex:column value="{!a.OverAll_Experience__c}" headerValue="OverAllExp"/> <!end-->
+            
+</apex:pageBlockTable>
+
+
+
+</apex:pageBlock>
+</apex:form>
+  </apex:page>

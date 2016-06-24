@@ -1,0 +1,26 @@
+<apex:page >
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+
+    function openDialog(){
+       $( "#dialog" ).show();
+       return null;
+    }
+    function CloseDialog(){
+       $( "#dialog" ).hide();
+    }
+
+
+
+</script>
+<apex:form >
+<input type="button" onclick="return openDialog();" value="Open Dialog"/>    
+
+   <div id="dialog" style="display: none;">
+      <apex:pageBlock > This is the popup..
+      <input type="button" onclick="return CloseDialog();" value="Close Dialog"/> 
+      </apex:pageBlock>
+   </div>
+</apex:form>
+</apex:page>

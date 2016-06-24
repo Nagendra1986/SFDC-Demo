@@ -1,0 +1,11 @@
+<apex:page controller="studentsearch" >
+
+<apex:form >
+<apex:inputText value="{!keyword}" label="keyword"/>
+  <apex:outputLabel >Filter Field Name</apex:outputLabel>
+ <apex:selectList value="{!searchfield}" label="Select Field">
+            <apex:selectOptions value="{!fields}"/>
+</apex:selectList>
+
+</apex:form>
+</apex:page>

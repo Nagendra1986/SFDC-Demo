@@ -1,0 +1,40 @@
+<apex:page standardController="Student__c" showHeader="true">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+function DoSomething(){
+   var j$ = jQuery.noConflict();
+   $("#editbutton").click(function(){
+  $("#editbutton").hide();
+});
+   }
+}
+</script>
+
+</head>   
+<body>
+<chatter:feed entityId="{!$User.Id}"/>
+<apex:form >
+
+<apex:pageBlock >
+<apex:pageBlockSection title="Student Details" columns="2" >
+                <apex:outputField value="{!Student__c.Name}"/>
+                <apex:outputField value="{!Student__c.Department__c}"/>
+                <apex:outputField value="{!Student__c.Course__c}"/>
+                <apex:outputField value="{!Student__c.Subject__c}"/>
+                <apex:outputField value="{!Student__c.Teacher__c}"/>
+                <apex:outputField value="{!Student__c.Institution_Name__c}"/>
+
+  </apex:pageBlockSection>
+  <apex:pageBlockButtons >
+     <apex:commandButton value="Edit" onclick="DoSomething();" id="editbutton"/>
+      <apex:commandButton value="Delete" action="{!delete}"/ >
+      <apex:commandButton value="edit" action="{!edit}"/ >
+  </apex:pageBlockButtons>                          
+                            
+</apex:pageBlock>
+
+</apex:form>
+</body>
+  </apex:page>

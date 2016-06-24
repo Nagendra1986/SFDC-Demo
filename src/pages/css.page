@@ -1,0 +1,36 @@
+<apex:page >
+    <style>
+    .myNewStyle
+    {
+    font-weight: bold;
+    color: red;
+    }
+    body
+    {
+   background-color: blue;
+    }
+    .divStyle
+    {
+  border-style:solid;
+  border-width:medium;
+
+    }
+    </style>
+  <apex:pageBlock >
+  <div styleClass="divStyle">
+    <apex:pageBlockSection title="section1" >
+       <apex:outputText styleClass="myNewStyle" value="This is my text"/>
+          
+       
+    </apex:pageBlockSection>
+  </div>
+  <div>  
+    <apex:pageBlockSection collapsible="true" id="mainRecord" columns="2" >
+     <apex:facet name="header">
+         <span style="color:black">Section2</span>
+          
+     </apex:facet>   
+     </apex:pageBlockSection>   
+   </div>       
+  </apex:pageBlock>
+</apex:page>

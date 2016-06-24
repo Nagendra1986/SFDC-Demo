@@ -1,0 +1,7 @@
+<apex:page >
+<apex:composition template="vfwktemplate">
+<apex:define name="body">
+{!$User.FirstName} welcome to force.com platform...
+</apex:define>
+</apex:composition>
+  </apex:page>

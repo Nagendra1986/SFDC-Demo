@@ -1,0 +1,5 @@
+<apex:page controller="HelloWorld" >
+  <c:boxedText borderwidth="1" text="Sruthi"/>
+  <c:boxedText borderwidth="5" text="Bangaru"/>
+
+  </apex:page>

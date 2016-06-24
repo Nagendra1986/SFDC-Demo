@@ -1,0 +1,30 @@
+<apex:page controller="anglrJsgetAccContcts">
+
+  <div ng-app="app" ng-controller="formController">
+  <form name="myForm" novalidate="novalidate">
+     Enter Account Name:
+    <input type="text" ng-model="myVar"/>
+     <input type="button" ng-click="save();"  value="getContacts"/>
+    </form>
+    </div>
+    <script>
+       var app = angular.module('app', ['ui.router']);
+     app.controller('formController', function ($scope, $filter,$http) {
+      $scope.contact = {!contactJson};/*{
+      FirstName: '{!Contact.FirstName}', 
+      LastName: '{!Contact.LastName}', 
+      
+     };*/
+  $scope.save = function()
+  {
+      saveMethod(JSON.stringify($scope.contact));
+  }
+});
+
+</script>
+  <apex:form >
+    <apex:actionFunction name="saveMethod" action="{!save}" oncomplete="location.reload();">
+      <apex:param assignTo="{!contactJson}" name="contactJson" value="x"/>
+   </apex:actionFunction>
+  </apex:form>  
+</apex:page>

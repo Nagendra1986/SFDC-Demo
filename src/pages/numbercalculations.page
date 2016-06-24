@@ -1,0 +1,17 @@
+<apex:page standardController="Account">
+  <script type="text/javascript" name="Real-time Calculation"> 
+    function calc(A,B,SUM) { 
+      var one = Number(A); 
+      if (isNaN(one)) { alert('Invalid entry: '+A); one=0; } 
+      var two = Number(document.getElementById(B).value);  
+      if (isNaN(two)) { alert('Invalid entry: '+B); two=0; }
+      
+      document.getElementById(SUM).value = one * two; 
+      } 
+  </script>
+  
+<input value="{!Account.Number1__c}" styleClass="masterClass" id="dpd1" onKeyUp="calc(this.value,'dpd2','dpdresult')" />
+<input value="{!Account.Number2__c}" styleClass="masterClass" id="dpd2" onKeyUp="calc(this.value,'dpd1','dpdresult')" />
+
+<output value="{!Account.Number3__c}" id="dpdresult" />  
+</apex:page>

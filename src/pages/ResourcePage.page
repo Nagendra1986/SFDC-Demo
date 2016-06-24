@@ -1,0 +1,37 @@
+<apex:page standardController="Resources__c" extensions="save_new">
+<apex:form >
+  <apex:pageBlock title="Resource Details">
+<apex:panelGrid columns="2">
+<apex:outputLabel value="Resource Name" for="Name"/>
+        <apex:inputField id="Name" value="{!Resources__c.Resource_Name__c}"/>
+
+ <apex:outputLabel value="EmpID" for="empid"/>
+        <apex:inputField id="empid" value="{!Resources__c.EmpID__c}"/>
+    <apex:outputLabel value="Contact No" for="conctNo"/>
+        <apex:inputField id="conctNo" value="{!Resources__c.Contact_No__c}"/>
+    <apex:outputLabel value="OverAll Experience" for="totexp"/>
+        <apex:inputField id="totexp" value="{!Resources__c.OverAll_Experience__c}"/>
+        
+     <apex:outputLabel value="Salesforce Experience" for="sfdcexp"/>
+        <apex:inputField id="sfdcexp" value="{!Resources__c.Salesforce_Experience__c}"/>
+       
+       <apex:outputLabel value="Practice Joining Date" for="jDate"/>
+        <apex:inputField id="jDate" value="{!Resources__c.Practice_Joining_Date__c}"/>
+        <apex:outputLabel value="Current Status" for="cStatus"/>
+        <apex:inputField id="cStatus" value="{!Resources__c.Current_Status__c}"/>
+
+<!-- start >
+ <apex:selectList id="cStatus" value="{!Resources__c.Current_Status__c}" size="1" title="Current Status">
+                        <apex:selectOptions value="{!cStatus}"></apex:selectOptions>
+                    </apex:selectList>        
+ <! end -->  
+       </apex:panelGrid>
+    <apex:pageBlockButtons >    
+      <apex:commandButton value="save" action="{!save}"/>
+      <apex:commandButton value="Cancel" action="{!cancel}"/>
+      <apex:commandButton value="Save&New" action="{!savenew}"/>
+
+    </apex:pageBlockButtons>  
+   </apex:pageBlock>
+</apex:form>
+</apex:page>

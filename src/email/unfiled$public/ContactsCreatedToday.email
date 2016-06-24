@@ -1,0 +1,35 @@
+<messaging:emailTemplate recipientType="User"
+relatedToType="Account"
+ subject="Contacts Created Today"  >
+<messaging:htmlEmailBody >
+        <html>
+            <body>
+
+            <p>Dear {!recipient.name},</p>
+            <p>Below is a list of contacts related to {!relatedTo.name}.</p>
+            <table border="0" >
+                <tr>
+                    <th>AccountId</th><th>FirstName</th><th>LastName</th>
+                    <th>Email</th>
+                </tr>
+                <apex:repeat var="cx" value="{!relatedTo.contacts}">
+                <tr>
+                    <td><a href = 
+                        "https://na1.salesforce.com/{!cx.id}">{!cx.AccountId}
+                    </a></td>
+                    <td>{!cx.FirstName}</td>
+                    <td>{!cx.LastName}</td>
+                    <td>{!cx.Email}</td>
+                </tr>
+                </apex:repeat> 
+            </table>
+            <p/>
+            <center>
+                <apex:outputLink value="http://www.salesforce.com">
+                    For more detailed information login to Salesforce.com
+                </apex:outputLink>
+            </center>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

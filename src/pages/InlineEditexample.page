@@ -1,0 +1,16 @@
+<apex:page standardController="Organisation__c" extensions="inlinecont" >
+<apex:form >
+   <apex:inputText label="ValuetoUpdate" value="{!upval}"/>
+   <apex:commandButton value="Save" action="{!savenew}" id="saveButton"  />
+   <apex:commandButton value="edit" action="{!save}" id="editButton"  />
+       <apex:pageBlock >
+             <apex:pageBlockTable id="pgtable" value="{!Organisations}" var="a">
+                <apex:column value="{!a.Name}" />
+                <apex:column value="{!a.Country__c}" />
+                <apex:column value="{!a.State__c}"/>
+              <apex:inlineEditSupport event="ondblClick" />
+
+             </apex:pageBlockTable>
+        </apex:pageBlock>
+</apex:form>      
+</apex:page>

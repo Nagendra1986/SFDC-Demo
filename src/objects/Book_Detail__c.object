@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>BookDetail_Compact</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>BookDetail_Compact</fullName>
+        <fields>Name</fields>
+        <fields>Description__c</fields>
+        <label>BookDetail Compact</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Returns Book to be returned details</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>fieldsetDemo</fullName>
+        <description>Demo</description>
+        <displayedFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>User__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>fieldsetDemo</label>
+    </fieldSets>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Issue_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <externalId>false</externalId>
+        <label>Issue Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>No_of_Days_Left__c</fullName>
+        <externalId>false</externalId>
+        <formula>Return_Date__c - Issue_Date__c</formula>
+        <label>No of Days Left</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Return_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>Issue_Date__c   + 10</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Return By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Return_Date__c</fullName>
+        <defaultValue>TODAY() + 4</defaultValue>
+        <externalId>false</externalId>
+        <label>Return Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Book_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>date_formula_field__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOW()  -  CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>date formula field</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>readonly__c</fullName>
+        <externalId>false</externalId>
+        <label>readonly</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Book Detail</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Book  Details Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Book  Details</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <listViewButtons>Mass_Delete</listViewButtons>
+        <listViewButtons>UpdateRecord</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Detail_Button</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Detail Button</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>{!Book_Detail__c.No_of_Days_Left__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>//Include and initialize the AJAX Toolkit javascript library
+//
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+
+
+// Get the list of accounts that should be deleted.
+// Use the $ObjectType merge field to indicate the type of
+// record Ids that are expected.
+//
+var idsToDelete = {!GETRECORDIDS( $ObjectType.Book_Detail__c)};
+var deleteWarning = &apos;Are you sure you wish to delete &apos; +
+                    idsToDelete.length + &apos; books?&apos;;
+
+if (idsToDelete.length &amp;&amp; (window.confirm(deleteWarning))) {
+
+   // Delete the records, and pass a function into the call
+   // so that the toolkit refreshes the current page
+   // asynchronously when the call succeeds.
+   //
+   sforce.connection.deleteIds(idsToDelete,
+          function() {navigateToUrl(window.location.href);});
+
+} else if (idsToDelete.length == 0) {
+   alert(&quot;Please select the contacts you wish to delete.&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>UpdateRecord</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>UpdateRecord</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+
+// Get the list of job applications that should be closed by using the
+// $ObjectType merge field to indicate the type of record Ids that
+// are expected.
+//
+var BookIdArr = {!GETRECORDIDS( $ObjectType.Book_Detail__c )};
+
+if (BookIdArr== null || BookIdArr.length == 0) {
+    alert(&quot;Please select the job applications you wish to update.&quot;);
+
+} else {
+
+    // Retrieving the job applications that should be deleted from
+    // the database is inefficient and unnecessary. Instead, create
+    // new job application records for each job application that
+    // should be updated, store them in an array, and then use the
+    // update API call.
+    //
+    var Books = new Array();
+
+    for (var i = 0; i &lt; BookIdArr.length; i++) {
+        var NBook = new sforce.SObject(&quot;wipro123__Book_Detail__c&quot;);
+
+        // Since we&apos;ll be using the update call, we must set the id
+        // on the new job application record.
+        //
+        NBook.Id = BookIdArr[i];
+
+        // Next set the appropriate fields to reject the
+        //application.
+        //
+        NBook.Name =  BookIdArr[i].Name;
+        //NBook.Stage__c = &quot;Closed - Rejected&quot;;
+
+        // Finally add the record to our array.
+        //
+        Books.push(NBook);
+    }
+
+    // Now make the update API call in a try statement so we can
+    // catch any errors. Save the resulting array so we can also
+    // check for problems with individual records.
+    //
+    var callCompleted = false;
+    try {
+        var result = sforce.connection.update(Books);
+        callCompleted = true;
+
+    } catch(error) {
+       alert(&quot;Failed to update Books with error: &quot; + error);
+    }
+
+    // Now check for problems with individual records.
+    //
+    if (callCompleted) {
+        for (var i = 0; i &lt; result.length; i++) {
+            if (!result[i].getBoolean(&quot;success&quot;)) {
+               alert(&quot;Book (id=&apos;&quot; + BookIdArr[i] +
+                     &quot;&apos;) could not be updated with error: &quot; +
+                     result[i].errors);
+            }
+        }
+
+        // Finally, refresh the browser to provide confirmation
+        // to the user that the job applications were rejected.
+        //
+        window.location.reload(true);
+    }
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>detaillink</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>detaillink</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>{!Book_Detail__c.Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>list_view_button</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>list view button</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!Book_Detail__c.No_of_Days_Left__c}</url>
+    </webLinks>
+</CustomObject>

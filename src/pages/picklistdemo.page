@@ -1,0 +1,8 @@
+<apex:page controller="picklistcontroller"  >
+<apex:form > 
+   <apex:outputLabel >Location</apex:outputLabel>&nbsp;
+   <apex:selectList value="{!profiles}" size="1" required="true" title="location">
+     <apex:selectOptions value="{!items}"/>
+  </apex:selectList>
+</apex:form>
+  </apex:page>

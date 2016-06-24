@@ -1,0 +1,32 @@
+<apex:page >
+<style>
+.easyui-tree {
+  margin-left:1em; /* indentation */
+  position:relative;
+}
+
+</style>
+<script type="text/javascript"  src="{!URLFOR($Resource.jQuery, '/jQuery/js/jquery-1.4.2.min.js')}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var node = $('#tt').tree('getSelected');
+if (node){
+    var nodes = [{
+        "id":13,
+        "text":"Raspberry"
+    },{
+        "id":14,
+        "text":"Cantaloupe"
+    }];
+    $('#tt').tree('append', {
+        parent:node.target,
+        data:nodes
+    });
+}
+</script>
+  <div style="width:200px;height:auto;border:1px solid #ccc;">
+    <ul id="tt" class="easyui-tree" ></ul>
+</div>
+</apex:page>

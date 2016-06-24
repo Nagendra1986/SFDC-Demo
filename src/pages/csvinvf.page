@@ -1,0 +1,6 @@
+<apex:page Controller="GenerateCSV" contentType="application/vnd.ms-excel" >
+<!--  contentType="text/csv#Contact.csv" >"First Name","Last Name"   -->
+  <apex:repeat value="{!Contacts}" var="con">
+  "{!con.FirstName}","{!con.LastName}"
+  </apex:repeat>
+</apex:page>

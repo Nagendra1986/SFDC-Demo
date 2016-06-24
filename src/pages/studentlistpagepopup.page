@@ -1,0 +1,106 @@
+<apex:page standardController="Student__c" extensions="student_list" id="thePage">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+     <style type="text/css">
+      
+       .customPopup{
+            background-color: lightgray;
+            border-style: solid;
+            border-width: 1px;
+            left: 50%;
+            padding:10px;
+            display:none;
+            position: absolute;
+            z-index: 9999;
+            /* These are the 3 css properties you will need to tweak so the pop 
+            up displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can also add 
+            the height property for a fixed size pop up.*/
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+        }
+        .popupBackground{
+            background-color:gray;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            display:none;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+     </style> 
+<script>
+ function showPop(){
+      
+    $( ".customPopup").show(1000);
+    // $(".customPopup").dialog({
+      //height: 140,
+      //modal: true
+      //}); 
+       //alert('World'); 
+    $(".popupBackground").css("color","red");
+     // return false;
+    
+ 
+  }
+ 
+</script>
+
+
+  <apex:form id="theForm">
+      
+   <apex:pageBlock id="theBlock">
+      <apex:pageBlockTable value="{!Records}" var="a" id="pbtable" >
+            <apex:column headerValue="Name" >
+           
+            <apex:commandLink value="{!a.Name}"  styleClass="clickLink"  action="{!showPopup}" oncomplete="showPop();" id="link" rerender="popup" >
+            <apex:param name="recid" value="{!a.Id}" assignTo="{!recid}" />
+            </apex:commandLink>
+            </apex:column>
+           <!-- <apex:column value="{!a.Department__r.Dept_Name__c}" headerValue="Department"/> -->
+           <apex:column value="{!a.Department__r.Dept_Name__c}">
+          <apex:facet name="header">
+           <apex:commandLink action="{!Records}" value="Department{!IF(sortExpression=='Department__c',IF(sortDirection='ASC','▼','▲'),'')}">
+             <apex:param value="Department__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+           </apex:commandLink>
+         </apex:facet>
+       </apex:column>
+            <apex:column value="{!a.Course__c}" headerValue="Course"/>
+            <!-- <apex:column value="{!a.Subject__r.Name }" headerValue="Subject"/>  -->
+           <apex:column value="{!a.Subject__r.Name}">
+          <apex:facet name="header">
+           <apex:commandLink action="{!Records}" value="Subject{!IF(sortExpression=='Subject__c',IF(sortDirection='ASC','▼','▲'),'')}" rerender="theBlock">
+             <apex:param value="Subject__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+           </apex:commandLink>
+         </apex:facet>
+       </apex:column>
+             
+      </apex:pageBlockTable>
+      
+        <apex:outputPanel id="popup" >
+        
+            <apex:outputPanel styleClass="popupBackground" id="outerPopup" layout="block" rendered="{!displayPopup}"/>
+            <apex:outputPanel styleClass="customPopup" id="innerPopup" layout="block" rendered="{!displayPopup}">
+                  <apex:pageBlockSection >
+                      <apex:inputField id="StudentName" value="{!stdnt1[0].Name}"/> <br></br>
+                      <apex:inputField id="StudentDepartment" value="{!stdnt1[0].Department__r.Dept_Name__c}"/> <br></br>
+                      <apex:inputField id="StudentCourse" value="{!stdnt1[0].Course__c}"/> <br></br>
+                      <apex:inputField id="StudentSubject" value="{!stdnt1[0].Subject__r.Name }"/>                   
+                     <apex:commandButton value="Save" onclick="saveStudent();" />
+                      <apex:actionFunction name="saveStudent" action="{!saveRecord}" reRender="pbtable,popup"/>
+                  </apex:pageBlockSection>
+                <apex:commandButton value="Hide Pop up" action="{!closePopup}" rerender="popup"/>
+            </apex:outputPanel>
+        </apex:outputPanel>
+ 
+     
+   </apex:pageBlock>
+ </apex:form>
+ 
+ 
+</apex:page>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Fiction</masterLabel>
+            <translation><!-- Fiction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Fiction</masterLabel>
+            <translation><!-- Non-Fiction --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SubCategory --></label>
+        <name>SubCategory__c</name>
+        <picklistValues>
+            <masterLabel>ChildrenFiction</masterLabel>
+            <translation><!-- ChildrenFiction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comedy</masterLabel>
+            <translation><!-- Comedy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fantasy</masterLabel>
+            <translation><!-- Fantasy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inspirational</masterLabel>
+            <translation><!-- Inspirational --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management</masterLabel>
+            <translation><!-- Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-help</masterLabel>
+            <translation><!-- Self-help --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spiritual</masterLabel>
+            <translation><!-- Spiritual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thriller</masterLabel>
+            <translation><!-- Thriller --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

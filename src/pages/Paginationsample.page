@@ -1,0 +1,23 @@
+<apex:page standardController="Account" extensions="paginationSample" recordsetVar="acc">
+  
+  <apex:pageBlock title="Viewing Accounts">
+  
+  <apex:form id="theForm">
+  
+<apex:commandButton action="{!returnrecord}" value="Display"/>
+          <apex:pageBlockSection >
+          
+
+
+
+        <apex:dataList value="{!acc}" var="a" type="1" rows="3">
+        {!a.name} ;&nbsp; {!a.AnnualRevenue}      </apex:dataList>
+    </apex:pageBlockSection>
+    <apex:panelGrid columns="2">
+      <apex:commandLink action="{!previous}">Previous</apex:commandlink>
+      <apex:commandLink action="{!next}">Next</apex:commandlink>
+    </apex:panelGrid>
+
+  </apex:form> 
+  </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,37 @@
+<apex:page controller="UpdateFieldValCtlr">
+  
+  
+  <script type= "text/javascript">
+  <apex:includeScript value="{!$Resource.jQuery}"/>
+  
+   
+       var j$ = jQuery.noConflict();
+       j$(document).ready(function(){
+           var qval = j$("[id$='qty']").val();
+           j$("[id$='qty']").keyup(function(){
+               var unitCost = j$("[id$='cst']").val();
+               var quantity = j$("[id$='qty']").val();
+               var totCost = unitCost*quantity;
+               j$("[id$='tol']").val(totCost);
+           });
+       });
+  </script>
+  <apex:form >
+      <apex:pageBlock >
+        <apex:pageBlockSection columns="1">
+             <apex:pageBlockSectionItem >
+              <apex:outputLabel for="cst" value="Unit Cost"></apex:outputLabel>
+              <apex:inputText value="{!cost}" id="cst"/>
+              </apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >
+              <apex:outputLabel for="qty" value="Quantity"></apex:outputLabel>
+              <apex:inputText value="{!quantity}" id="qty"/>
+             </apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >
+              <apex:outputLabel for="tol" value="Total Cost"></apex:outputLabel>
+              <apex:inputText value="{!total}" id="tol"/>
+              </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

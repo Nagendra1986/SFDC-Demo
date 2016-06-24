@@ -1,0 +1,16 @@
+<apex:page renderAs="{!chooserender}"  standardController="Resources__c" extensions="reportcontroller" >
+    <apex:form >
+        <apex:actionFunction name="disprec"  action="{!displayrec}" reRender="mytab" />
+
+        <apex:inputField value="{!rept.Current_Status__c}" onChange="disprec()" / >
+        <apex:commandLink rendered="{!$CurrentPage.parameters.p == null}"  value="PDF" action="{!deliverAsPDF}" target="_blank"></apex:commandLink>
+                    
+        <apex:pageBlock id="mytab">
+          
+            <apex:pageBlockTable value="{!listrec}" var="stat">
+                <apex:column value="{!stat.OverAll_Experience__c}"/>&nbsp;
+                <apex:column value="{!stat.Resource_Name__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

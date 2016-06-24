@@ -1,0 +1,96 @@
+<apex:page >
+<style>
+.layer1 {
+margin: 0;
+padding: 0;
+width: 500px;
+border:1px;
+}
+.msg_head {
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    background-color:#FFCCCC;
+    margin:1px;
+}
+.heading {
+margin: 1px;
+color: #fff;
+padding: 3px 10px;
+cursor: pointer;
+position: relative;
+background-color:#c30;
+}
+.msg_list {
+    margin: 0px;
+    padding: 0px;
+    width: 383px;
+}
+.content {
+padding: 5px 10px;
+background-color:#fafafa;
+}
+p { padding: 5px 0; }
+</style>
+<script type="text/javascript"  src="{!URLFOR($Resource.jQuery, '/jQuery/js/jquery-1.4.2.min.js')}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    
+
+   
+jQuery(document).ready(function() {
+  jQuery(".content").hide();
+  //toggle the componenet with class msg_body
+  
+  $("p").each(function() {
+    $(this).bind(
+        "click",
+        function() {
+            jQuery(".content").toggle("slow");
+        });
+  });
+  
+  
+/*  jQuery(".heading").click(function()
+  {
+  
+  
+    //jQuery(this).next(".content").slideToggle(400);
+    jQuery(".content").toggle("slow");
+   
+  });  */
+  
+});
+$(".msg_head").click(function(){
+    $(this).next(".msg_body").slideToggle(100);
+})
+.toggle( function() {
+    $(this).children("span").text("[+]");
+}, function() {
+    $(this).children("span").text("[-]");
+});
+</script>
+<apex:form >
+<apex:pageBlock >
+<div class="msg_list">
+<p class="msg_head">Header-1 <span>[-]</span></p>
+<div class="msg_body">
+            orem ipsum dolor sit amet
+        </div>
+    </div>    
+<div class="layer1">
+
+<p class="heading"><span>[-]</span>  Header-1 </p>
+<div class="content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit orem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+<div class="layer1">
+<p class="heading">Header-2</p>
+<div class="content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit orem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+</div>
+<p class="heading">Header-3</p>
+<div class="content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit orem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+</div>
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page renderAs="{!if($CurrentPage.parameters.p == null, null, 'pdf')}"  > 
+    <apex:pageBlock title="Some Page Block">
+        <apex:pageBlockSection title="Section 1"> Text </apex:pageBlockSection>
+        <apex:pageBlockSection title="Section 2"> Text </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:outputLink rendered="{!$CurrentPage.parameters.p == null}" value="/apex/pdfrendered?p=true" target="_blank">PDF</apex:outputLink>
+</apex:page>

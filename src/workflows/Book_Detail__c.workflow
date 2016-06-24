@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Reminder</fullName>
+        <ccEmails>kester.l04@wipro.com</ccEmails>
+        <ccEmails>kestercath@gmail.com</ccEmails>
+        <ccEmails>sruthi.macherla@gmail.com</ccEmails>
+        <ccEmails>srutthi.m18@wipro.com</ccEmails>
+        <description>Email Reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kester.l045@wipro.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sruthi.macherla@wipro.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Book_Return_Email_Reminder</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_on_Book_Return</fullName>
+        <ccEmails>kester.l04@wipro.com</ccEmails>
+        <description>Email on Book Return</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kester.l045@wipro.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sruthi.macherla@wipro.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Book_Return_Email_Reminder</template>
+    </alerts>
+    <rules>
+        <fullName>Email Reminder</fullName>
+        <actions>
+            <name>Email_on_Book_Return</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Book_Detail__c.User__c</field>
+            <operation>notEqual</operation>
+            <value>NULL</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_Reminder</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Book_Detail__c.Return_Date__c</offsetFromField>
+            <timeLength>-2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

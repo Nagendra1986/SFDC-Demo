@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Line item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Line items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Invoice statement --></label>
+        <name>Invoice_statement__c</name>
+        <relationshipLabel><!-- Line items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>Unit_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Units sold --></label>
+        <name>Units_sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- merchandise --></label>
+        <name>merchandise__c</name>
+        <relationshipLabel><!-- Line items --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You have ordered more items than the items in stock. --></errorMessage>
+        <name>Order_in_Stock</name>
+    </validationRules>
+</CustomObjectTranslation>

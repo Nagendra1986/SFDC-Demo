@@ -1,0 +1,13 @@
+<apex:page standardController="Resources__c"  extensions="resource_crud">
+<apex:pageBlock > <apex:pageBlockSection title="My Content Section" columns="2" >
+                <apex:outputField value="{!Resources__c.Resource_Name__c}"/>
+                <apex:outputField value="{!Resources__c.EmpID__c}"/>
+                <apex:outputField value="{!Resources__c.Contact_No__c}"/>
+                <apex:outputField value="{!Resources__c.OverAll_Experience__c}"/>
+                <apex:outputField value="{!Resources__c.Salesforce_Experience__c}"/>
+                <apex:outputField value="{!Resources__c.Practice_Joining_Date__c}"/>
+                <apex:outputField value="{!Resources__c.Current_Status__c}"/>
+  </apex:pageBlockSection>
+</apex:pageBlock>
+
+  </apex:page>

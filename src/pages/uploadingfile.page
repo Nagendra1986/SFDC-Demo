@@ -1,0 +1,12 @@
+<apex:page standardcontroller="Document"  extensions="documentExt">
+<apex:form >
+<apex:pageblock >
+<apex:pageBlockSection >
+  <apex:inputFile value="{!document.body}" filename="{!document.name}"/>
+            <apex:commandButton value="Save" action="{!save}"/>
+</apex:pageBlockSection>
+
+
+</apex:pageblock>
+</apex:form>  
+</apex:page>

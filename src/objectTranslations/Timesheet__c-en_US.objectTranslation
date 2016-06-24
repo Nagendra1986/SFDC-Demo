@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Timesheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Timesheets</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effort (in hours) --></label>
+        <name>Effort_in_hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incident Activity --></label>
+        <name>Incident_Activity__c</name>
+        <picklistValues>
+            <masterLabel>Analysis</masterLabel>
+            <translation><!-- Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coding</masterLabel>
+            <translation><!-- Coding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployment</masterLabel>
+            <translation><!-- Deployment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documentation</masterLabel>
+            <translation><!-- Documentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review &amp; Peer Testing</masterLabel>
+            <translation><!-- Review &amp; Peer Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rework</masterLabel>
+            <translation><!-- Rework --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Testing</masterLabel>
+            <translation><!-- Unit Testing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Incident# --></label>
+        <name>Incident__c</name>
+        <relationshipLabel><!-- Timesheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Activity --></label>
+        <name>Other_Activity__c</name>
+        <picklistValues>
+            <masterLabel>Analysis</masterLabel>
+            <translation><!-- Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference call</masterLabel>
+            <translation><!-- Conference call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document Preparation</masterLabel>
+            <translation><!-- Document Preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Env set up</masterLabel>
+            <translation><!-- Env set up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knowledge Transfer</masterLabel>
+            <translation><!-- Knowledge Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meetings &amp; discussions</masterLabel>
+            <translation><!-- Meetings &amp; discussions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reading documents</masterLabel>
+            <translation><!-- Reading documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviews &amp; feedback</masterLabel>
+            <translation><!-- Reviews &amp; feedback --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Status Report</masterLabel>
+            <translation><!-- Status Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Study</masterLabel>
+            <translation><!-- System Study --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Troubleshooting &amp; Fixing</masterLabel>
+            <translation><!-- Troubleshooting &amp; Fixing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Timesheet Entry --></label>
+        <name>Timesheet_Entry__c</name>
+        <relationshipLabel><!-- Timesheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Timesheet for Date --></label>
+        <name>Timesheet_for_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Timesheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Week Start Date --></label>
+        <name>Week_Start_Date__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

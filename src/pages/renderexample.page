@@ -1,0 +1,23 @@
+<apex:page controller="renderedex" > 
+  <apex:form >  
+   <apex:pageBlock title="User Input" id="thePageBlock">  
+       <apex:outputText value="Text1"></apex:outputText>  
+       <apex:inputtext value="{!text1}">  
+      <apex:actionSupport reRender="refresh" event="onkeyup" />       
+       </apex:inputtext><br/>   
+        <apex:outputPanel id="refresh" >  
+                            <apex:pageblocksection rendered="{!LEN(text1)>0}">  
+                          <apex:inputText value="{!text2 }" id="theTextInput2" label="Input 2" rendered="true" tabindex="2">  
+                           <apex:actionSupport reRender="refresh1" event="onkeyup" />   
+                           </apex:inputtext>  
+                     </apex:pageblocksection>  
+        </apex:outputPanel>  
+       <apex:outputPanel id="refresh1" >  
+                         <apex:pageblocksection rendered="{!LEN(text2)>0}">  
+                            <apex:inputText value="{!text3 }" id="theTextInput3" label="Input 3" rendered="true" tabindex="3">  
+                            </apex:inputtext>  
+                            </apex:pageblocksection>  
+        </apex:outputPanel>  
+       </apex:pageBlock>  
+  </apex:form>  
+  </apex:page>

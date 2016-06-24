@@ -1,0 +1,31 @@
+<apex:page standardController="Resources__c" extensions="save_new">
+<script>
+  function confirmCancel() {
+      var isCancel = confirm("Are you sure you wish to delete?");
+            if (isCancel) return true;
+  
+     return false;
+  }  
+  </script>
+
+<apex:form >
+<apex:pageBlock mode="edit">
+<apex:pageBlockSection title="My Content Section" columns="2" >
+                <apex:outputField value="{!Resources__c.Resource_Name__c}"/>
+                <apex:outputField value="{!Resources__c.EmpID__c}"/>
+                <apex:outputField value="{!Resources__c.Contact_No__c}"/>
+                <apex:outputField value="{!Resources__c.OverAll_Experience__c}"/>
+                <apex:outputField value="{!Resources__c.Salesforce_Experience__c}"/>
+                <apex:outputField value="{!Resources__c.Practice_Joining_Date__c}"/>
+                <apex:outputField value="{!Resources__c.Current_Status__c}"/>
+  </apex:pageBlockSection>
+  <apex:pageBlockButtons >
+     <apex:commandButton value="Edit" action="{!edit}"/>
+      <apex:commandButton value="Delete" action="{!delete1}" onclick="return confirmCancel()" immediate="true"/ >
+
+  </apex:pageBlockButtons>                          
+                            
+</apex:pageBlock>
+
+</apex:form>
+  </apex:page>

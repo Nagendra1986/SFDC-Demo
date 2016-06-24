@@ -1,0 +1,32 @@
+<apex:page controller="jqueryClass">
+<!--   http://salesforceondemand.blog.com/2012/08/15/jquery-tree-view-in-visualforce-pages/  -->
+<html>
+ <head>
+
+
+ <apex:stylesheet value="{!URLFOR($Resource.jquerytreeview, 'treeview')}" />
+   
+<!-- End of Javascript files -->
+
+<script>
+  $(document).ready(function(){
+    $("#browser").treeview();
+  });
+  </script>
+ </head>
+<body>
+
+  <ul id="browser" class="filetree">
+    <apex:repeat value="{!lst}" var="acc">
+    <li class="closed"><span class="folder">{!acc.name}</span>
+        <ul>
+            <apex:repeat value="{!acc.contacts}" var="c">
+            <li><span class="file">{!c.name}</span></li>
+            </apex:repeat>
+        </ul>
+    </li>
+    </apex:repeat>
+   </ul>
+</body>
+</html>
+</apex:page>

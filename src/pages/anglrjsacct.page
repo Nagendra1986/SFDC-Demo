@@ -1,0 +1,19 @@
+<apex:page >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+</script>
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+  <button ng-click="countFun()">Click me!</button>
+   <p>{{ count }}</p>
+  </div>
+<script>
+var app = angular.module('myApp',[]);
+app.controller('myCtrl', function($scope) {
+     $scope.count = 0;
+    $scope.countFun= function() {
+     
+      $scope.count++;
+    }
+});
+</script>
+</apex:page>

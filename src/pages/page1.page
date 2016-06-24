@@ -1,0 +1,7 @@
+<apex:page Standardcontroller="Account" extensions="page1controller" >
+  Helloooo {!$User.FirstName} <br/> {!name}<br/>{!str1}
+  <apex:detail subject="{!Account}" relatedList="false"/>
+<apex:relatedList list="OpenActivities"
+subject="{!$CurrentPage.parameters.relatedId}"/>
+<!--- related ID is the id of contact record -->
+</apex:page>

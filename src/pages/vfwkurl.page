@@ -1,0 +1,8 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations  </h1>
+    <apex:outputLink value="http://google.co.in">Click me! </apex:outputLink>
+    <apex:outputLink value="{! $Page.vfwkaccntdetailpage}">   I am me!</apex:outputLink>
+    <apex:outputLink value="{! URLFOR($Action.Account.new)}">Create</apex:outputLink>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

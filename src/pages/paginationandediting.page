@@ -1,0 +1,91 @@
+<apex:page controller="pagination_editing">
+    <style> 
+       #overlay {
+         position:absolute;
+         top:0;
+         left:0;
+         width:100%;
+         height:100%;
+         background:#fff;
+         opacity: 0.1;
+         filter: alpha(opacity=10);
+          }
+   </style> 
+
+ <apex:pageMessages />
+     <apex:form >
+      <apex:commandButton value="Save" action="{!tosave}" id="saveButton"  />
+        <apex:pageBlock id="pb">
+       
+        <apex:pageBlockTable value="{!Organisations}" var="a">
+               <apex:column width="60">
+                     <apex:inputcheckbox value="{!a.selected}">
+                       <apex:actionSupport event="onclick" action="{!getSelected}" rerender="Selected_PBS"/>
+                     </apex:inputcheckbox>&nbsp;
+                     </apex:column>
+                     <apex:column headerValue="Organisation Name" width="200">
+                    <b><apex:outputField value="{!a.org11.Name}"/> </b>    
+                     </apex:column>
+               
+                <apex:column headerValue="Country" width="200">
+                <apex:outputField value="{!a.org11.Country__c}"/>
+                </apex:column>
+                <apex:column headerValue="State" width="200">
+                <apex:outputField value="{!a.org11.State__c}"/>
+                </apex:column>
+                 <apex:inlineEditSupport event="ondblClick" showOnEdit="saveButton"/>
+           </apex:pageBlockTable>
+
+
+                 <apex:panelGrid columns="9">
+                        <apex:selectList label="Set Page Size:" value="{!pageSize}" size="1" required="true" >
+                        <apex:selectOptions value="{!items}"/>
+                         <apex:actionSupport event="onchange" action="{!Refresh}"  reRender="pb"/>      
+                        </apex:selectList> 
+                        
+                        getPages
+                        <apex:commandButton status="fetchStatus" reRender="pb" value="|<" action="{!first}" disabled="{!!hasPrevious}" title="First Page"/>
+                        <apex:commandButton status="fetchStatus" reRender="pb" value="<" action="{!previous}" disabled="{!!hasPrevious}" title="Previous Page"/>
+                        <apex:actionFunction name="RefreshPgNum" rerender="pb" action="{!Refresh}"  >
+                            <apex:param name="firstParam" assignTo="{!PageNumber}" value="" />
+                        </apex:actionFunction>
+
+                       <apex:selectList label="Set Page NO:" value="{!PageNumber}" id="pgno" size="1" required="true"  >
+                            <apex:selectOptions value="{!Pages}"/>   
+                            <apex:actionSupport event="onchange" action="{!Refresh}"> 
+                            <apex:param name="pagenumber" assignTo="{!PageNumber}" value="" />
+                            </apex:actionSupport>
+                        </apex:selectList>  
+                        
+
+                        <apex:outputText id="optxt" value="{!pageNumber } of:{!noOfPages}" />
+                        <apex:commandButton status="fetchStatus" reRender="pb" value=">" action="{!next}" disabled="{!!hasNext}" title="Next Page"  >
+                        <apex:actionSupport event="onclick " action="{!tosave}" /> </apex:commandbutton>
+
+ 
+
+
+                        <apex:commandButton status="fetchStatus" reRender="pb" value=">|" action="{!last}" disabled="{!!hasNext}" title="Last Page"/>
+                        <apex:outputText >{!(pageNumber * display)+1-display}-{!IF((pageNumber * display)>noOfRecords, noOfRecords,(pageNumber * display))} of {!noOfRecords}</apex:outputText>
+                        
+                   
+               </apex:panelGrid>
+            
+                   
+                     <apex:outputpanel >
+                     <apex:actionstatus id="fetchStatus"> 
+                       <apex:facet name="start">     
+                                  <div class="waitingSearchDiv" id="el_loading" style="background-color: #424242;  
+                                                       height: 100%;opacity:0.65;width:100%;">    
+                                  <div class="waitingHolder" style="top: 74.2px; width: 91px;">     
+                                  <img class="waitingImage" src="{!$Resource.LoadingImage}" height="150" width="300"   margin-left="auto" margin-right="auto"  title="Please Wait..." />   
+                                  <span class="waitingDescription">Fetching Records...</span>    
+                                   </div>    
+                                 </div>    
+                            </apex:facet>     
+                         </apex:actionstatus> 
+                      </apex:outputpanel>
+              
+       </apex:pageBlock> 
+    </apex:form>
+</apex:page>

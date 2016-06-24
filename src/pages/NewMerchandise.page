@@ -1,0 +1,18 @@
+<apex:page standardController="merchandise__c">
+    <apex:form >
+      <apex:pageBlock >
+          <apex:pageBlockSection >
+                                      <apex:panelGrid columns="2">   
+                  <apex:outputLabel >Description</apex:outputLabel>
+                  <apex:inputField value="{!merchandise__c.Description__c}" label="Description"/>
+                  <apex:outputLabel >Price</apex:outputLabel>
+                  <apex:inputField value="{!merchandise__c.Price__c}"/>
+                  <apex:outputLabel >TotalInventory</apex:outputLabel>
+                  <apex:inputField value="{!merchandise__c.Total_Inventory__c}"/>
+                  <apex:commandButton action="{!Save}" value="Save"
+                            styleClass="btn"/>
+                   </apex:panelGrid>
+        </apex:pageBlockSection>
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>

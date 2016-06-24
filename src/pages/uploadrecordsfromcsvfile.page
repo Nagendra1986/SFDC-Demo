@@ -1,0 +1,32 @@
+<apex:page controller="ImportFromCSVFile" >
+  <apex:form >
+    <apex:pagemessages />
+     <apex:pageBlock >
+       <apex:inputFile value="{!contentfile}" fileName="{!myfile}"/>
+       <apex:commandButton value="UploadFile" action="{!ReadFile}" style="width:70px;"/>
+       <apex:pageblocktable value="{!uploadedAccounts}" var="acc" rendered="{!NOT(ISNULL(uploadedAccounts))}">
+          <apex:column headerValue="Account Name">
+              <apex:outputField value="{!acc.Name}"/>
+          </apex:column>
+          <apex:column headerValue="Shipping Street">
+              <apex:outputField value="{!acc.ShippingStreet}"/>
+          </apex:column>
+          <apex:column headerValue="Shipping City">
+              <apex:outputField value="{!acc.ShippingCity}"/>
+          </apex:column>
+          <apex:column headerValue="Shipping State">
+              <apex:outputField value="{!acc.ShippingState}"/>
+          </apex:column>
+         
+      </apex:pageblocktable> 
+           </apex:pageBlock>
+ <apex:pageBlock >  
+       <apex:pageblocktable value="{!uploadedContacts}" var="con" rendered="{!NOT(ISNULL(contcsToupload))}">
+         <apex:column headerValue="contact Last Name">
+              <apex:outputField value="{!con.LastName}"/>
+          </apex:column>
+       </apex:pageblocktable>
+
+     </apex:pageBlock>  
+  </apex:form>
+</apex:page>

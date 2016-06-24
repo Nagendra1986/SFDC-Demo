@@ -1,0 +1,29 @@
+<apex:page standardController="Teacher__c" recordSetVar="teach" tabstyle="account" sidebar="false">
+<apex:form >
+ <apex:pageMessages />
+
+<apex:panelGrid columns="2">
+      <apex:outputLabel value="View:"/>
+      <apex:selectList value="{!filterId}" size="1">
+        <apex:actionSupport event="onchange" rerender="list"/>
+        <apex:selectOptions value="{!listviewoptions}"/>
+      </apex:selectList>
+    </apex:panelGrid>
+
+  <apex:pageBlock >
+  <apex:pageBlockSection >
+    <apex:pageBlockTable value="{!teach}" var="a" id="list">
+      <apex:column value="{!a.Department__c}"/>
+      <apex:column headerValue="Subject">
+      <apex:inputField value="{!a.Subject__c}"/>
+      </apex:column>
+    </apex:pageBlockTable>
+   </apex:pageBlockSection> 
+    <apex:panelGrid columns="2">
+      <apex:commandLink action="{!previous}">Previous</apex:commandlink>
+      <apex:commandLink action="{!next}">Next</apex:commandlink>
+    </apex:panelGrid>
+<apex:commandButton value="Save" action="{!save}"/>
+  </apex:pageBlock>
+ </apex:form> 
+</apex:page>

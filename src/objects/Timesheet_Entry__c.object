@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Displayfields__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Displayfields</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Effort__c</fullName>
+        <externalId>false</externalId>
+        <label>Effort (in hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fri__c</fullName>
+        <externalId>false</externalId>
+        <label>Fri</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incident__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Incident #</label>
+        <referenceTo>Incident__c</referenceTo>
+        <relationshipLabel>Timesheet Entries</relationshipLabel>
+        <relationshipName>Timesheet_Entries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mon__c</fullName>
+        <externalId>false</externalId>
+        <label>Mon</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH( Week_Start_Date__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Activity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>System Study</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Troubleshooting &amp; Fixing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knowledge Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Status Report</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reviews &amp; feedback</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conference call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meetings &amp; discussions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Env set up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reading documents</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Document Preparation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extra Curricular Activities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sat__c</fullName>
+        <externalId>false</externalId>
+        <label>Sat</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sun__c</fullName>
+        <externalId>false</externalId>
+        <label>Sun</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tasks_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Tasks Other</label>
+        <picklist>
+            <picklistValues>
+                <fullName>System Study</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Troubleshooting &amp; Fixing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knowledge Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Status Report</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reviews &amp; feedback</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conference call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meetings &amp; discussion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Env set up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reading documents</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Document Preparation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extra Curricular Activities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tasks_for_Incident__c</fullName>
+        <externalId>false</externalId>
+        <label>Tasks</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Coding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unit Testing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Review &amp; Peer Testing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rework</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Thu__c</fullName>
+        <externalId>false</externalId>
+        <label>Thu</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tue__c</fullName>
+        <externalId>false</externalId>
+        <label>Tue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wed__c</fullName>
+        <externalId>false</externalId>
+        <label>Wed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Week_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Week Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Timesheet Entry</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Incident__c</columns>
+        <columns>Mon__c</columns>
+        <columns>Tue__c</columns>
+        <columns>Wed__c</columns>
+        <columns>Thu__c</columns>
+        <columns>Fri__c</columns>
+        <columns>Sat__c</columns>
+        <columns>Sun__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>TE-{0000000}</displayFormat>
+        <label>Timesheet Entry Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Timesheet Entries</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Efforts_cannot_be_more_than_24_fri</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Fri__c &gt; 24, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Fri__c</errorDisplayField>
+        <errorMessage>Efforts cannot be more than 24 hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_more_than_24_mon</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Mon__c &gt; 24, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Mon__c</errorDisplayField>
+        <errorMessage>Efforts cannot be more than 24 hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_more_than_24_sat</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Sat__c &gt; 24, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Sat__c</errorDisplayField>
+        <errorMessage>Efforts cannot be more than 24 hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_more_than_24_sun</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Sun__c &gt; 24, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Sun__c</errorDisplayField>
+        <errorMessage>Efforts cannot be more than 24 hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_more_than_24_thu</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Thu__c &gt; 24, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Thu__c</errorDisplayField>
+        <errorMessage>Efforts cannot be more than 24 hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_more_than_24_tue</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Tue__c &gt; 24, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Tue__c</errorDisplayField>
+        <errorMessage>Efforts cannot be more than 24 hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_more_than_24_wed</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Wed__c &gt; 24, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Wed__c</errorDisplayField>
+        <errorMessage>Efforts cannot be more than 24 hours</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_negative_fri</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Fri__c &lt; 0, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Fri__c</errorDisplayField>
+        <errorMessage>Effort cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_negative_mon</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Mon__c &lt; 0, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Mon__c</errorDisplayField>
+        <errorMessage>Effort cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_negative_sat</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Sat__c &lt; 0, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Sat__c</errorDisplayField>
+        <errorMessage>Effort cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_negative_sun</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Sun__c &lt; 0, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Sun__c</errorDisplayField>
+        <errorMessage>Effort cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_negative_thu</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Thu__c &lt; 0, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Thu__c</errorDisplayField>
+        <errorMessage>Effort cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_negative_tue</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Tue__c &lt; 0, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Tue__c</errorDisplayField>
+        <errorMessage>Effort cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Efforts_cannot_be_negative_wed</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Wed__c &lt; 0, TRUE,FALSE)</errorConditionFormula>
+        <errorDisplayField>Wed__c</errorDisplayField>
+        <errorMessage>Effort cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_Update_to_Incident_Effort</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR( ISCHANGED( Incident__c ) , ISCHANGED( Tasks_for_Incident__c ))</errorConditionFormula>
+        <errorDisplayField>Incident__c</errorDisplayField>
+        <errorMessage>Sorry, but you cannot modify the Task. Please enter 0 Effort and Add another row if you want to delete this entry.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_update_to_Other_Effort</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR( ISCHANGED( Tasks_Other__c ) , ISCHANGED( Comments__c ))</errorConditionFormula>
+        <errorDisplayField>Tasks_Other__c</errorDisplayField>
+        <errorMessage>Sorry, but you cannot modify the Task. Please enter 0 Effort and Add Another Row if you want to delete this entry.</errorMessage>
+    </validationRules>
+</CustomObject>

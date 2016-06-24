@@ -1,0 +1,5 @@
+<apex:page renderAs="{!if($CurrentPage.parameters.p==null,null,'pdf' )}" >
+ 
+  <h1>Congratulations</h1>
+ 
+</apex:page>

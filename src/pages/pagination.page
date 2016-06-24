@@ -1,0 +1,31 @@
+<apex:page controller="pagination_Sample">
+    <apex:form >
+        <apex:pageBlock id="pb">
+            <apex:pageBlockTable value="{!Organisations}" var="a">
+                <apex:inputCheckbox value="{!valCheck}"/>
+                <apex:column value="{!a.Name}"/>
+                <apex:column value="{!a.Country__c}"/>
+                <apex:column value="{!a.State__c}"/>
+                  </apex:pageBlockTable>
+                 
+            <apex:panelGrid columns="7">
+                <apex:commandButton status="fetchStatus" reRender="pb" value="|<" action="{!first}" disabled="{!!hasPrevious}" title="First Page"/>
+                <apex:commandButton status="fetchStatus" reRender="pb" value="<" action="{!previous}" disabled="{!!hasPrevious}" title="Previous Page"/>
+                <apex:commandButton status="fetchStatus" reRender="pb" value=">" action="{!next}" disabled="{!!hasNext}" title="Next Page"/>
+                <apex:commandButton status="fetchStatus" reRender="pb" value=">|" action="{!last}" disabled="{!!hasNext}" title="Last Page"/>
+                
+                <apex:outputText >{!(pageNumber * display)+1-display}-{!IF((pageNumber * display)>noOfRecords, noOfRecords,(pageNumber * display))} of {!noOfRecords}</apex:outputText>
+                <apex:commandButton status="fetchStatus" reRender="pb" value="Refresh" action="{!refresh}" title="Refresh Page"/>
+               <!-- <apex:inputText id="pgSize" label="PageSize" value="{!pageSize}" /> -->
+                <apex:selectList value="{!pageSize}" size="1" required="true" title="pagination">
+                <apex:selectOptions value="{!items}"/>
+                </apex:selectList>
+              <!-- <apex:actionSupport event="onclick"   action="{!refresh}"    rerender="pb" /> 
+                 <apex:commandButton action="{!refresh}" value="Refresh" reRender="pb"  /> -->
+                <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                    <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText=""/>
+                </apex:outputPanel>
+            </apex:panelGrid>
+       </apex:pageBlock> 
+    </apex:form>
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page Controller="schedulebatchcontroller" tabStyle="Account">
+  <apex:form >
+    <apex:pageBlock title="Dynamic Response Demo" id="out">
+        <apex:pageBlockButtons location="bottom">
+            <apex:commandButton value="Get Xml Response" action="{!XMLResponse}" rerender="out" status="actStatusId"/>
+            <apex:actionStatus id="actStatusId">
+                <apex:facet name="start">
+                    <img src="/img/loading.gif" />
+                </apex:facet>
+            </apex:actionStatus>
+        </apex:pageBlockButtons>
+       
+         
+        <apex:pageBlockSection collapsible="false" title="Template Selection">
+             <apex:pageBlockSectionItem >
+                <apex:outputLabel >Select Template Type :</apex:outputLabel>
+                <apex:selectList value="{!selectedTemplate}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!TemplateTypes}"/>
+                </apex:selectList>
+             </apex:pageBlockSectionItem>
+           
+        </apex:pageBlockSection>
+          <apex:pageBlockSection collapsible="false" title="XML Response">
+            <apex:outputText value="{!xmlResponse}" label="XML Response of selected:"/>
+        </apex:pageBlockSection>
+        
+    </apex:pageblock>
+  </apex:form>
+</apex:page>

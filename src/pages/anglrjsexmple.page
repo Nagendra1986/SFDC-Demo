@@ -1,0 +1,37 @@
+<apex:page standardStylesheets="false" cache="false" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" controller="angularController">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <body ng-app="uiTest">
+        
+        <div ng-controller="searchController">
+            <input type="text" ng-model="inputString"/>
+            {{ inputString }}
+            <input type="button" ng-click="queryAccount();" value="button"/>
+        </div>
+        <script type="text/javascript">
+            (function(){
+                var uiTestApp = angular.module('uiTest',['ui.router']);
+                
+                
+                uiTestApp.controller('searchController' ,function ($scope, $filter,$http){
+                    $scope.queryAccount = function(){
+                        inputString = $scope.inputString;
+                         Visualforce.remoting.Manager.invokeAction(
+                             '{!$RemoteAction.angularController.queryAccount}',
+                             inputString,
+                             function(result, event) {
+                             if (event.status) {
+                                alert(result);
+                              } else {
+                                alert(event);
+                              }
+                             },
+                            { buffer: true, escape: true, timeout: 30000 }                         
+                         );
+                    };
+                    
+                });
+            })();
+        </script>
+    </body>
+</apex:page>

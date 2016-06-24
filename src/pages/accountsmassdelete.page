@@ -1,0 +1,12 @@
+<apex:page standardController="Account" extensions="AccntsController"  recordSetVar="accnt" >
+   <apex:form >
+       <apex:pageBlock title="Del Selected Account">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!deleteSelected}" value="delete"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!accnt}" var="a">
+               <apex:column value="{!a.name}" />                            
+               </apex:pageBlockTable> 
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

@@ -1,0 +1,42 @@
+<apex:page sidebar="false" controller="dashboardController">
+
+ 
+
+
+<apex:form id="db_refresh_frame">
+<apex:pageBlock > 
+
+<apex:iframe id="db" src="/servlet/servlet.ChartServer?rsid=0FL90000000mHKf&ruid=00590000001BK14&did={!dList}&s=7&fs=10&tfg=12&tfs=-16777216&explode=0&c=column&cs=0&title=&eh=no&compo=yes&fg=-16777216&bg1=-1&bg2=-1&bgdir=2&dl1=Functional+Area&dl2=&l=2&sax=yes&Yman=no&nc=0&actUrl=%2F00O900000049FKg&sd=1&scv=no&sct=no&spt=no&bd=yes&cu=USD&ab=X&u=0&vt=0&ab2=Y&u2=0&vt2=0&vl0=Record+Count&spoc=no&topn=no&gc0=-1&gc1=-1&gc2=-1&sona=0&refreshts=1381921753000"/>
+<!--<apex:iframe src="/servlet/servlet.ChartServer?rsid=0FL900000021mWB&ruid=00590000001BK14&did=01Z90000000QGig&s=7&fs=10&tfg=12&tfs=-16777216&explode=0&c=column&cs=0&title=&eh=no&compo=yes&fg=-16777216&bg1=-1&bg2=-1&bgdir=2&dl1=Location&dl2=&l=2&sax=yes&Yman=no&nc=0&actUrl=%2F00O90000008mjzq&sd=1&scv=no&sct=no&spt=no&bd=yes&cu=USD&ab=X&u=0&vt=0&ab2=Y&u2=0&vt2=0&vl0=Record+Count&spoc=no&topn=no&gc0=-1&gc1=-1&gc2=-1&sona=0&refreshts=1435058969000"/>
+ <apex:iframe src="{!URLFOR('/01Z90000000QGig')}" scrolling="true" />-->
+
+
+<apex:repeat value="{!RprtIds}" var="rId">
+{!rId}
+
+<analytics:reportChart reportId="{!rId}" size="tiny" /> <br/>
+
+</apex:repeat>
+
+
+
+
+    <table>
+   <tr>
+     <td> <analytics:reportChart reportId="00O900000049FKg" size="tiny" > </analytics:reportChart> </td>
+     <td> <analytics:reportChart reportId="00O90000008mjzq" size="small" ></analytics:reportChart> </td>
+     <td> <analytics:reportChart reportId="00O90000008mjzl" size="small" ></analytics:reportChart> </td>
+     <td> <analytics:reportChart reportId="00O90000008mj5O" size="small" ></analytics:reportChart> </td>
+     00O90000008mj5O
+     00O90000008mjzl
+  </tr>
+</table>
+
+
+
+<!-- <input value="Refresh" class="btn" id="db_ref_btn" name="refresh" onclick="window.open('/01Z90000000QGig?poll=1&amp;m=HOMEPAGE&amp;nr=1&amp;refresh=1', 'db_refresh_frame');" title="Refresh Dashboard" type="button" /> -->
+
+<!-- <input name="refresh" title="Refresh" class="btn" id="refreshInput" onclick="javascript: sfdc.dashboardView.doRefresh(false);" type="button" value="Refresh"/> -->
+</apex:pageBlock>
+</apex:form>
+</apex:page>

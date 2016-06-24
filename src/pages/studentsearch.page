@@ -1,0 +1,5 @@
+<apex:page >
+<h1>
+  <c:vf att1="hi helloo"/>
+</h1> 
+</apex:page>

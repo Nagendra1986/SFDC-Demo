@@ -1,0 +1,14 @@
+<apex:page standardController="User" extensions="sampleDetailPageCon">
+<style>.fewerMore { display: none;}</style>
+<apex:form > 
+<apex:pageMessages />
+ <apex:pageblock id="CustomList" title="Related users"  > 
+   <apex:pageBlockTable value="{!oppz}" var="o" rendered="{!NOT(ISNULL(oppz))}">   
+        <apex:column value="{!o.Name}"/> 
+         <apex:column value="{!o.Manager.Name }"/>     
+                       </apex:pageBlockTable>  
+               <apex:outputLabel value="No records to display" rendered="{!(ISNULL(oppz))}" styleClass="noRowsHeader">
+               </apex:outputLabel> 
+               </apex:pageblock>
+               </apex:form>
+    </apex:page>

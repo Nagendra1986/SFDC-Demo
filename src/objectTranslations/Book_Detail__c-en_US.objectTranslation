@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Book Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Book  Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Date --></label>
+        <name>Issue_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Days Left --></label>
+        <name>No_of_Days_Left__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return By --></label>
+        <name>Return_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return Date --></label>
+        <name>Return_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Book  Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- date formula field --></label>
+        <name>date_formula_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- readonly --></label>
+        <name>readonly__c</name>
+    </fields>
+    <layouts>
+        <layout>Book Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Detail_Button --></label>
+        <name>Detail_Button</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- UpdateRecord --></label>
+        <name>UpdateRecord</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- detaillink --></label>
+        <name>detaillink</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- list_view_button --></label>
+        <name>list_view_button</name>
+    </webLinks>
+</CustomObjectTranslation>

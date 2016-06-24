@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Incident</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Incidents</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Delivery Date --></label>
+        <name>Actual_Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual End Date --></label>
+        <name>Actual_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Start date --></label>
+        <name>Actual_Start_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual hrs --></label>
+        <name>Actual_hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Analysis Actual Hrs --></label>
+        <name>Analysis_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Analysis Estimated Hrs --></label>
+        <name>Analysis_Estimate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applies To Type --></label>
+        <name>Applies_To_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applies To --></label>
+        <name>Applies_To__c</name>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR System</masterLabel>
+            <translation><!-- HR System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel</masterLabel>
+            <translation><!-- Travel --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business Approval Live Test (BA2) --></label>
+        <name>Business_Approval_Live_Test_BA2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Approval UAT (BA1) --></label>
+        <name>Business_Approval_UAT_BA1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Requirements Document (BRD --></label>
+        <name>Business_Requirements_Document_BRD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Test Case (BTC) --></label>
+        <name>Business_Test_Case_BTC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coding Actual Hrs --></label>
+        <name>CUT_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coding Estimated Hrs --></label>
+        <name>CUT_Estimated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Code Review (CoR) --></label>
+        <name>Code_Review_CoR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completion Date --></label>
+        <name>Completion_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Complexity --></label>
+        <name>Complexity__c</name>
+        <picklistValues>
+            <masterLabel>1-Critical/Run Business</masterLabel>
+            <translation><!-- 1-Critical/Run Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-Mandatory/Legal</masterLabel>
+            <translation><!-- 2-Mandatory/Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-High/$ Benefits</masterLabel>
+            <translation><!-- 3-High/$ Benefits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4-Medium/Efficiency</masterLabel>
+            <translation><!-- 4-Medium/Efficiency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-Low/Nice to have</masterLabel>
+            <translation><!-- 5-Low/Nice to have --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>Created_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Year --></label>
+        <name>Created_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned Delivery Date --></label>
+        <name>Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deployment Actual Hrs --></label>
+        <name>Deployment_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deployment Estimated Hrs --></label>
+        <name>Deployment_Estimated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Documentation Actual Hrs --></label>
+        <name>Documentation_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Documentation Estimated Hrs --></label>
+        <name>Documentation_Estimated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Environment --></label>
+        <name>Environment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Completion Date --></label>
+        <name>Estimated_Completion_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated hours --></label>
+        <name>Estimated_hours_ams__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated hrs --></label>
+        <name>Estimated_hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Analysis (IA) --></label>
+        <name>Impact_Analysis_IA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incident # --></label>
+        <name>Incident_No_for_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incident # --></label>
+        <name>Incident__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner Account --></label>
+        <name>Owner_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned End date --></label>
+        <name>Planned_End_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned Start date --></label>
+        <name>Planned_Start_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ref # --></label>
+        <name>Ref__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Checklist (RC) --></label>
+        <name>Release_Checklist_RC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Notes (RN) --></label>
+        <name>Release_Notes_RN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remarks --></label>
+        <name>Remarks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reported By - Department --></label>
+        <name>Reported_By_Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reported By - Sub Department --></label>
+        <name>Reported_By_Sub_Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reported By --></label>
+        <name>Reported_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reported Date --></label>
+        <name>Reported_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request for Change (RFC) --></label>
+        <name>Request_for_Change_RFC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution --></label>
+        <name>Resolution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Responsible --></label>
+        <name>Responsible__c</name>
+        <relationshipLabel><!-- Incidents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Review &amp; Peer Testing Actual Hrs --></label>
+        <name>Review_Testing_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review &amp; Peer Testing Estimated Hrs --></label>
+        <name>Review_Testing_Estimated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rework Actual Hrs --></label>
+        <name>Rework_Actual_Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rework Estimated hrs --></label>
+        <name>Rework_Estimated_hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Root Cause Analysis (RCA) --></label>
+        <name>Root_Cause_Analysis_RCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Severity --></label>
+        <name>Severity__c</name>
+        <picklistValues>
+            <masterLabel>High - Run business</masterLabel>
+            <translation><!-- High - Run business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low - Important but not urgent</masterLabel>
+            <translation><!-- Low - Important but not urgent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium - Efficiency</masterLabel>
+            <translation><!-- Medium - Efficiency --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Solution --></label>
+        <name>Solution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Date --></label>
+        <name>Status_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Analysis In Progress</masterLabel>
+            <translation><!-- Analysis In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation><!-- Assigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coding Complete / System Testing</masterLabel>
+            <translation><!-- Coding Complete / System Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployed</masterLabel>
+            <translation><!-- Deployed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation In Progress</masterLabel>
+            <translation><!-- Implementation In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Business User Clarification</masterLabel>
+            <translation><!-- Pending Business User Clarification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending User Confirmation</masterLabel>
+            <translation><!-- Pending User Confirmation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending with Third Party</masterLabel>
+            <translation><!-- Pending with Third Party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reported</masterLabel>
+            <translation><!-- Reported --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolved</masterLabel>
+            <translation><!-- Resolved --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Steps to reproduce --></label>
+        <name>Steps_to_reproduce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Summary --></label>
+        <name>Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Outage --></label>
+        <name>System_Outage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Since Creation --></label>
+        <name>Time_Since_Creation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Since Status Date --></label>
+        <name>Time_Since_Status_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Test Case (UTC) --></label>
+        <name>Unit_Test_Case_UTC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Testing Actual hrs --></label>
+        <name>Unit_Testing_Actual_hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Testing Estimated hrs --></label>
+        <name>Unit_Testing_Estimated_hrs__c</name>
+    </fields>
+    <layouts>
+        <layout>AMS Incident Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- End Date cannot be less than Start Date --></errorMessage>
+        <name>Actual_End_date_must_be_greater_than_str</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End Date cannot be less than Start Date --></errorMessage>
+        <name>End_Date_must_be_greater_than_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Estimates cannot be negative. --></errorMessage>
+        <name>Estimates_cannot_be_negative_CUT</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Estimates cannot be negative. --></errorMessage>
+        <name>Estimates_cannot_be_negative_analysis</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Estimates cannot be negative. --></errorMessage>
+        <name>Estimates_cannot_be_negative_deploy</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Estimates cannot be negative. --></errorMessage>
+        <name>Estimates_cannot_be_negative_docum</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Estimates cannot be negative. --></errorMessage>
+        <name>Estimates_cannot_be_negative_review</name>
+    </validationRules>
+</CustomObjectTranslation>

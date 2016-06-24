@@ -1,0 +1,28 @@
+<apex:page StandardController="Organisation__c" extensions="RowEditingcontroller2">
+
+  <apex:pageMessages />
+
+    <apex:form id="theForm">
+           <apex:inputText label="ValuetoUpdate" value="{!upval}"/>
+           <apex:commandButton value="Save" action="{!tosave}" id="saveButton"  />
+           <apex:outputPanel style="float:middle">
+              <apex:pageBlock >
+              <apex:pageBlockTable value="{!Organisations}" var="a">
+                 <apex:column headerValue="Select">
+                <apex:inputCheckbox value="{!a.selected }">
+                <apex:actionSupport event="onclick" action="{!getSelected}" rerender="Selected_PBS" />
+                 </apex:inputCheckbox>
+                  </apex:column>
+                <apex:column value="{!a.orgs.Name}"/>
+                <apex:column value="{!a.orgs.Country__c}"/>
+                <apex:column value="{!a.orgs.State__c}"/>
+                <apex:inlineEditSupport event="ondblClick" />
+
+
+             </apex:pageBlockTable>
+              </apex:pageBlock>
+      </apex:outputPanel>
+ 
+  </apex:form>
+  
+  </apex:page>

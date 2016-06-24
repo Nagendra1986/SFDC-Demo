@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Incident__c.Incident__c</field>
+    </columns>
+    <columns>
+        <field>Incident__c.Description__c</field>
+    </columns>
+    <columns>
+        <field>Incident__c.Summary__c</field>
+    </columns>
+    <columns>
+        <field>Incident__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Incident__c.Severity__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Incident__c.Status__c</column>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Incident__c.Applies_To__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Open Incidents</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Incident__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Incident__c.Actual_Delivery_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

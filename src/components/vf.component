@@ -1,0 +1,5 @@
+<apex:component >
+  <apex:attribute name="att1" type="string" description="att1" required="true"/>
+  {!att1}
+   <apex:image value="{!$Resource.LoadingImage}"> </apex:image>
+</apex:component>

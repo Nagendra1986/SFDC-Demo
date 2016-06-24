@@ -1,0 +1,42 @@
+<apex:page controller="fadein_cont" >
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#j_id0:j_id2:j_id3:button").click(function(){
+    alert("Bye! ");
+    
+ 
+  });
+});
+function showpopup(){
+ document.getElementById('frnt').style.display = "block";
+}
+
+function closepopup(){
+ document.getElementById('frnt').style.display = "none";
+}
+function hideshow(which){
+if (!document.getElementById)
+return
+if (which.style.display=="block")
+which.style.display="none"
+else
+which.style.display="block"
+}
+</script>
+<apex:form >
+ <div id="popup">
+ <div id="bck" />
+ <div id="frnt" style="display:none;" >
+Click on closepopup to close the popup...
+ <button onclick="closepopup()">close popup</button> 
+ </div>
+ </div>
+ <button onclick="showpopup()">Show popup</button> 
+ <a href="javascript:hideshow(document.getElementById('adiv'))">Click here</a>
+ <div id="adiv" style="font:24px bold; display: block">Now you see me</div>
+ </apex:form> 
+ </html>
+</apex:page>

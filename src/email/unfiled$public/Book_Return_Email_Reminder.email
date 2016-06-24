@@ -1,0 +1,7 @@
+Hi {!Book_Detail__c.User__c},
+
+Your book return due is in 2days. Please return it on time.
+
+
+Regards,
+{!Book_Detail__c.CreatedBy}

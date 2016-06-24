@@ -1,0 +1,17 @@
+<apex:page standardController="Idea__c">
+<apex:form >
+    <apex:pageBlock title="Idea Information">
+  <apex:panelGrid columns="2">
+        <apex:outputLabel value="Title" for="Title"/>
+        <apex:inputField id="Title" value="{!Idea__c.Title__c}"/>
+     <apex:outputLabel value="Description" for="Description"/>
+        <apex:inputField id="Description" value="{!Idea__c.Description__c}"/>
+   <apex:outputLabel value="Keyword" for="Keyword"/>
+        <apex:inputField id="Keyword" value="{!Idea__c.Keyword__c}"/>
+
+        <apex:commandButton value="save" action="{!save}"/>
+               </apex:panelGrid>
+     
+      </apex:pageBlock>
+      </apex:form>
+  </apex:page>
